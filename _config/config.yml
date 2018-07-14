@@ -1,0 +1,6 @@
+---
+Name: zxcvbnconfig
+---
+SilverStripe\Core\Injector\Injector:
+  SilverStripe\Security\PasswordValidator:
+    class: Dhensby\Zxcvbn\PasswordValidator
