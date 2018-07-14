@@ -4,3 +4,10 @@ Name: zxcvbnconfig
 SilverStripe\Core\Injector\Injector:
   SilverStripe\Security\PasswordValidator:
     class: Dhensby\Zxcvbn\PasswordValidator
+SilverStripe\Dev\Backtrace:
+  ignore_function_args:
+    - [ 'Dhensby\Zxcvbn\PasswordValidator', 'validate' ]
+    - [ 'Dhensby\Zxcvbn\PasswordValidator', 'testScore' ]
+    - [ 'Dhensby\Zxcvbn\PasswordValidator', 'testLength' ]
+    - [ 'Dhensby\Zxcvbn\PasswordValidator', 'testHistory' ]
+    - [ 'ZxcvbnPhp\Zxcvbn', 'passwordStrength' ]
