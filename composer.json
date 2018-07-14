@@ -1,0 +1,30 @@
+{
+	"name": "dhensby/silverstripe-zxcvbn",
+	"description": "Realistic SilverStripe password strength validator based on Zxcvbn PHP",
+    "type": "silverstripe-module",
+	"keywords": ["silverstripe", "security", "zxcvbn", "password", "validator"],
+	"license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Dan Hensby",
+            "email": "github@hens.by"
+        }
+    ],
+    "require": {
+        "php": "^5.6 || ^7.0",
+        "silverstripe/framework": "^4",
+        "bjeavons/zxcvbn-php": "^0.3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dhensby\\Zxcvbn\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.x-dev"
+        }
+    },
+    "prefer-stable": true,
+	"minimum-stability": "dev"
+}
