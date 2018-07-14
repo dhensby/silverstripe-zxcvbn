@@ -39,7 +39,13 @@ The existing rules for mimimum length and historical password count still exist 
 a password with a short length will do well to reach a score of 3 and a short password of score 3 is going to be better
 than a long password of score 2.
 
-If you don't have any existing configuration you can set the 
+If you don't have any existing configuration you can set the validator up with the help of `Injector` and no PHP code is
+needed:
+
+```yml
+SilverStripe\Security\PasswordValidator:
+  min_test_score: 3
+```
 
 ## Guidance
 
