@@ -1,7 +1,7 @@
 {
 	"name": "dhensby/silverstripe-zxcvbn",
 	"description": "Realistic SilverStripe password strength validator based on Zxcvbn PHP",
-    "type": "silverstripe-module",
+    "type": "silverstripe-vendormodule",
 	"keywords": ["silverstripe", "security", "zxcvbn", "password", "validator"],
 	"license": "BSD-3-Clause",
     "authors": [
