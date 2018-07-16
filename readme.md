@@ -40,11 +40,20 @@ a password with a short length will do well to reach a score of 3 and a short pa
 than a longer password of score 2.
 
 If you don't have any existing configuration you can set the validator up with the help of `Injector` and no PHP code is
-needed:
+needed (SS 4.2+):
 
 ```yml
 SilverStripe\Security\PasswordValidator:
   min_test_score: 3
+```
+
+Or:
+
+```yml
+SilverStripe\Core\Injector\Injector:
+  SilverStripe\Security\PasswordValidator:
+    properties:
+      MinTestScore: 3
 ```
 
 ## Guidance
