@@ -27,6 +27,14 @@ class PasswordValidator extends BaseValidator
     }
 
     /**
+     * @return \ZxcvbnPhp\Zxcvbn
+     */
+    protected function getScorer()
+    {
+        return new \ZxcvbnPhp\Zxcvbn();
+    }
+
+    /**
      * @param string $password
      * @param \SilverStripe\Security\Member $member
      * @param ValidationResult $result
@@ -47,7 +55,7 @@ class PasswordValidator extends BaseValidator
             ARRAY_FILTER_USE_KEY
         ));
 
-        $strength = (new \ZxcvbnPhp\Zxcvbn())->passwordStrength($password, $userData);
+        $strength = $this->getScorer()->passwordStrength($password, $userData);
 
         if ($strength['score'] < $this->getMinTestScore()) {
             $error = _t(
