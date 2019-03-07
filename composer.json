@@ -13,7 +13,7 @@
     "require": {
         "php": "^5.6 || ^7.0",
         "silverstripe/framework": "^4",
-        "bjeavons/zxcvbn-php": "^0.3.0"
+        "mkopinsky/zxcvbn-php": "*"
     },
     "autoload": {
         "psr-4": {
